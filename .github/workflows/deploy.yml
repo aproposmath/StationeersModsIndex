@@ -1,0 +1,18 @@
+name: Build modrepo.xml file from mod repos
+
+on:
+  workflow_dispatch:
+    
+jobs:
+  build-modrepo-xml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run modrepo builder action
+        uses: aproposmath/modrepo-builder-action@v1
+        with:
+          mod-repos: |
+            - "aproposmath/StationeersIC10Editor"
+            - "aproposmath/stationeers-pytrapic"
