@@ -2,7 +2,7 @@ name: Build modrepo.xml file from mod repos
 
 on:
   workflow_dispatch:
-    
+
 jobs:
   build-modrepo-xml:
     runs-on: ubuntu-latest
@@ -14,5 +14,5 @@ jobs:
         uses: aproposmath/modrepo-builder-action@v1
         with:
           mod-repos: |
-            - "aproposmath/StationeersIC10Editor"
-            - "aproposmath/stationeers-pytrapic"
+            "aproposmath/StationeersIC10Editor"
+            "aproposmath/stationeers-pytrapic"
