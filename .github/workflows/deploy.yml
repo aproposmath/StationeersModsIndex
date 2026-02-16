@@ -3,6 +3,9 @@ name: Build modrepo.xml file from mod repos
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-modrepo-xml:
     runs-on: ubuntu-latest
